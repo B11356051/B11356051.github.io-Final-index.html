@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的休閒生活</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; 
+        }
+
+        .page-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out; 
+        }
+        .page-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .uniform-image {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-700 text-white p-4 shadow-xl">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-extrabold mb-2 md:mb-0 transform hover:scale-105 transition-transform duration-300">我的休閒生活</h1>
+            <ul class="flex flex-wrap justify-center md:flex-nowrap space-x-4">
+                <li><a href="#" data-page="home" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">首頁</a></li>
+                <li><a href="#" data-page="badminton" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">打羽球</a></li>
+                <li><a href="#" data-page="swimming" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">游泳</a></li>
+                <li><a href="#" data-page="fitness" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">健身</a></li>
+                <li><a href="#" data-page="novels" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">閱讀小說</a></li>
+                <li><a href="#" data-page="connect" class="nav-link text-lg px-3 py-2 rounded-md hover:bg-white hover:text-blue-700 transition-all duration-300">一起來交流</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container mx-auto p-4 flex-grow">
+
+        <section id="home-page" class="page-content active bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-5xl font-extrabold text-blue-800 mb-6 text-center">歡迎來到我的休閒世界！</h2>
+
+            <p class="text-3xl text-gray-700 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
+                在這個網站裡，我將與您分享我生活中最熱愛的幾項休閒活動：從揮灑汗水的羽球場，到水中暢遊的泳池，再到挑戰自我的健身房，以及沉浸於文字世界的閱讀時光。希望您也能從中找到樂趣與共鳴！
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <div class="bg-blue-50 p-6 rounded-md shadow-sm border border-blue-100 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-3">活力羽球</h3>
+
+                    <p class="text-2xl text-gray-600">享受每一次跳躍和揮拍的快感。</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-md shadow-sm border border-green-100 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-green-700 mb-3">清涼游泳</h3>
+                    <p class="text-2xl text-gray-600">在水中找回身心的平衡與平靜。</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-md shadow-sm border border-purple-100 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-3">力量健身</h3>
+                    <p class="text-2xl text-gray-600">挑戰體能極限，塑造健康體魄。</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-md shadow-sm border border-red-100 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-red-700 mb-3">文字世界</h3>
+                    <p class="text-2xl text-gray-600">透過小說，探索無限的想像空間。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="badminton-page" class="page-content bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-4xl font-extrabold text-blue-700 mb-6 text-center">我的羽球時光</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <img src="https://pic03.eapple.com.tw/allyoung/plan_06.png" alt="羽球場景" class="uniform-image mb-6 md:mb-0">
+                <div class="flex-grow">
+
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-4">
+                        打羽球是我最喜歡的運動之一。無論是單打還是雙打，每一次的揮拍、跳躍和截擊都讓我感到充滿活力。它不僅能鍛鍊身體，提高反應能力，更是與朋友交流、享受運動樂趣的好方式。
+                    </p>
+                    <p class="text-3xl text-gray-700 leading-relaxed">
+                        我很喜歡在休閒時打羽球，在羽球場上揮灑汗水，享受比賽的刺激與合作的默契，是我放鬆身心、紓壓的最佳途徑。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="swimming-page" class="page-content bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-4xl font-extrabold text-green-700 mb-6 text-center">暢游水中</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center md:space-x-reverse md:space-x-8">
+                <img src="https://media.istockphoto.com/id/465383082/zh/%E7%85%A7%E7%89%87/female-swimmer-at-the-swimming-pool.jpg?b=1&s=612x612&w=0&k=20&c=3SNMmRZC_kmGcvgQjyWMy-VqQlXD_aY-O-qKXcIhUug=" alt="游泳池場景" class="uniform-image mb-6 md:mb-0">
+                <div class="flex-grow">
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-4">
+                        我也很喜歡在休閒時去泳池游泳，當我進入水中，彷彿所有的煩惱都被沖刷殆盡。游泳是一種全身性的運動，能夠有效鍛鍊心肺功能，同時對關節的衝擊較小。
+                    </p>
+                    <p class="text-3xl text-gray-700 leading-relaxed">
+                        在水中自由自在地前行，感受水流的阻力與推力，不僅是一種鍛鍊，更是一種享受。尤其是在炎熱的天氣，游泳更是最佳的消暑方式。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fitness-page" class="page-content bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-4xl font-extrabold text-purple-700 mb-6 text-center">健身與自我挑戰</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <img src="https://rays-fitness.com.tw/wp-content/uploads/2024/04/womens-fitness-02-585x390.jpg" alt="健身房場景" class="uniform-image mb-6 md:mb-0">
+                <div class="flex-grow">
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-4">
+                        健身是我以前去軍校的習慣。透過重量訓練和有氧運動，我能夠不斷挑戰自己的體能極限，感受到身體逐漸變得更強壯的成就感。每次訓練後的肌肉痠痛，都提醒著我付出的努力。
+                    </p>
+                    <p class="text-3xl text-gray-700 leading-relaxed">
+                        健身不僅讓我擁有健康的體魄，也讓我學習到堅持和紀律的重要性。在健身房中，我專注於每一個動作，享受運動帶來的快感，這也是一種獨特的紓壓方式。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="novels-page" class="page-content bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-4xl font-extrabold text-red-700 mb-6 text-center">沉浸在小說世界</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center md:space-x-reverse md:space-x-8">
+                <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2024/01/02/0/28639123.jpg&x=0&y=0&sw=0&sh=0&exp=3600&w=930" alt="閱讀小說場景" class="uniform-image mb-6 md:mb-0">
+                <div class="flex-grow">
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-4">
+                        當我翻開一本我喜歡的小說，就彷彿進入了另一個世界。無論是軍事小說、玄幻小說，還是現在流行的穿越加系統的小說，這些小說總能帶給我無窮的想像空間。
+                    </p>
+                    <p class="text-3xl text-gray-700 leading-relaxed">
+                        閱讀小說是我放鬆身心、探索未知、豐富內心世界的方式。在忙碌的生活中，抽出時間享受片刻的寧靜，與書中的人物一同經歷喜怒哀樂，是我最享受的休閒活動之一。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="connect-page" class="page-content bg-white p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-4xl font-extrabold text-teal-700 mb-6 text-center">有興趣一起運動或聊天嗎？</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <img src="https://photo.518.com.tw/selfmedia/articles/1913/166744655518774.jpeg" alt="共同運動或聊天" class="uniform-image mb-6 md:mb-0">
+                <div class="flex-grow">
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-4">
+                        如果您也對打羽球、游泳、健身或閱讀小說有興趣，歡迎與我交流！無論是想找個球伴，或是想分享讀書心得，甚至是聊聊健身的秘訣，都非常期待與您互動。
+                    </p>
+                    <p class="text-3xl text-gray-700 leading-relaxed mb-6">
+                        認識志同道合的朋友，一起享受休閒樂趣，是生活中一大快事。期待您的訊息！
+                    </p>
+                    <h3 class="text-2xl font-semibold text-teal-600 mb-3">我的聯絡方式：</h3>
+
+                    <ul class="text-3xl text-gray-700 list-disc list-inside space-y-2">
+                        <li>Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">20050116amy@gmail.com</a></li>
+                        <li>Line ID : 940116amy</li>
+                        <li>(此處可根據您的意願添加其他聯絡方式)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-8 shadow-inner">
+        <p>&copy; 2025 我的休閒生活.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const pages = document.querySelectorAll('.page-content');
+
+            function showPage(pageId) {
+                pages.forEach(page => {
+
+                    if (page.id === pageId + '-page' && page.classList.contains('active')) {
+                        return;
+                    }
+
+                    page.classList.remove('active');
+                });
+
+                setTimeout(() => {
+                    pages.forEach(page => {
+                        if (page.id === pageId + '-page') {
+                            page.classList.add('active'); 
+                        }
+                    });
+                }, 50); 
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    const pageToShow = e.target.dataset.page; 
+                    showPage(pageToShow); 
+                });
+            });
+
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
